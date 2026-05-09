@@ -19,7 +19,7 @@ Instead of reading RFID tags, the app repurposes the 125kHz antenna to act as a 
 
 ## Limitations
 
-Because this app uses the RFID hardware for an unintended purpose, its range and accuracy are limited. Expect a detection range of only a couple of inches at most. This tool is primarily educational and experimental, and it is not a replacement for a dedicated metal detector.
+Because this app uses the RFID hardware for an unintended purpose, its range and accuracy are limited. Expect a detection range of only a few cm at most. This tool is primarily educational and experimental, and it is not a replacement for a dedicated metal detector.
 
 ## Installation
 
