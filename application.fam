@@ -6,4 +6,5 @@ App(
     stack_size=2 * 1024,
     fap_category="Tools",
     fap_icon="nail_icon.png",
+    sources=["src/*.c"],
 )

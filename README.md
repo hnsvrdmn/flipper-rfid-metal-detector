@@ -7,9 +7,19 @@ A Flipper Zero application that repurposes the 125kHz RFID antenna to act as a m
 - **Adjustable Sensitivity**: Tune out environmental noise or adjust for specific uses (like scanning a human) with the Left/Right buttons.
 - **Multiple Modes**: Toggle Sound/Vibro modes with the OK button.
 
+## Controls
+- **Left / Right**: Adjust sensitivity (decrease / increase).
+- **OK**: Cycle through alert modes (Sound+Vibro, Sound only, Vibro only, None).
+- **Up / Down**: Open and close the Help screen.
+- **Back**: Exit the application.
+
 ## How It Works
 
-The app uses the 125kHz antenna as an induction coil. By keeping the electromagnetic field active, the app continuously measures the duration (pulse width) of the signal's positive half-waves using timer captures. When metal enters the field, it creates eddy currents that draw energy from the coil, causing the antenna's voltage/amplitude to drop. This drop alters the comparator's output, shortening the measured pulse width or causing it to drop out entirely. The code calculates the delta between a fixed baseline and a moving average of these real-time timing values to trigger the detection UI.
+Instead of reading RFID tags, the app repurposes the 125kHz antenna to act as a raw induction coil. By keeping the electromagnetic field active, the app continuously measures the duration (pulse width) of the signal's positive half-waves using timer captures. When metal enters the field, it creates eddy currents that draw energy from the coil, causing the antenna's voltage/amplitude to drop. This drop alters the comparator's output, shortening the measured pulse width or causing it to drop out entirely. The code calculates the delta between a fixed baseline and a moving average of these real-time timing values to trigger the detection UI.
+
+## Limitations
+
+Because this app uses the RFID hardware for an unintended purpose, its range and accuracy are limited. Expect a detection range of only a couple of inches at most. This tool is primarily educational and experimental, and it is not a replacement for a dedicated metal detector.
 
 ## Installation
 
